@@ -1,3 +1,9 @@
+body{
+	background-image: url(css/back.jpg);
+	background-position: center center;
+
+}
+
 .row{
 	padding-left:100px;
 }
@@ -6,6 +12,9 @@
 	font-family: Courier;
 	font-style: oblique;
 	font-weight: bold;
+	text-shadow: white 2 2 2px;
+	text-shadow: grey 1px 1px 0, grey -1px -1px 0, 
+                 grey -1px 1px 0, grey 1px -1px 0;
 }
 .list-group-item:hover {
     background-color: #f2ddc6;
@@ -16,4 +25,8 @@
     right: 7px;
     top: 7px;
     
+}
+.check:hover{
+	background: radial-gradient(white, #e3f3ff);
+    color: black;
 }

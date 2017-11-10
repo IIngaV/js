@@ -41,9 +41,10 @@ listd.className="list-group-item";
 		}
 	}
 }
-/*var elem = document.getElementsByTagName('li');
-elem.addEventListener('click', func);
-function func() {
-	this.parentElement.style.backgroundColor ="#b94e48";
-}*/
+var elem = document.getElementsByTagName('li');
+elem.className = "list-group-item";
+elem.onclick =  function(){
+	var result = this.parentElement;
+	result.style.backgroundColor ="#b94e48";
+}
 deleted();
