@@ -1,21 +1,22 @@
 check();
 function check(){
-	var list = document.getElementsByTagName("LI");
+	var list = document.getElementsByTagName("li");
 	list.className="list-group-item";
 	for (var i = 0; i < list.length; i++) 
 	{
-		  var span = document.createElement("span");
+		  /*var span = document.createElement("span");
 		  var txt = document.createElement("input");
-		  txt.type = "checkbox";
-		  span.className = "check";
-		  span.appendChild(txt);
-		  list[i].appendChild(span);
+		  txt.type = "checkbox";*/
+		  var btn = document.createElement("BUTTON");
+		  var t = document.createTextNode("Delete");
+		  btn.className = "check";
+		  btn.appendChild(t);
+		  list[i].appendChild(btn);
 	}
 }
 
 function todoList() {
 	var item = document.getElementById("todoInput").value;
-	if (item==null){
 	var text = document.createTextNode(item);
 	var newItem = document.createElement("li");
 	newItem.className="list-group-item";
@@ -27,11 +28,11 @@ function todoList() {
 		document.getElementById("todoList").appendChild(newItem);
 	}
 	check();
-}
+
 }
 function deleted(){
 var list = document.getElementsByClassName("check");
-var listd=document.getElementsByTagName("LI");
+var listd=document.getElementsByTagName("li");
 listd.className="list-group-item";
 	for (var i = 0; i < list.length; i++) {
 		list[i].onclick = function() {
@@ -40,11 +41,6 @@ listd.className="list-group-item";
 		}
 	}
 }
-/*var hover=document.getElementsByTagName("li");
-hover.className="list-group-item";
-hover.onclick = function(){
-	alert("doit");
-}*/
 /*var elem = document.getElementsByTagName('li');
 elem.addEventListener('click', func);
 function func() {
