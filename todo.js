@@ -1,5 +1,6 @@
 var deal=2;
 check();
+made();
 function check(){
 	var list = document.getElementsByTagName("li");
 	list.className="list-group-item";
@@ -13,11 +14,13 @@ function check(){
 		  btn.appendChild(t);
 		  list[i].appendChild(btn);
 		  btn.className = "check";
-		  /*var btn1 = document.createElement("BUTTON");
-		  var t1 = document.createTextNode("Change");
+		  var btn1 = document.createElement("BUTTON");
+		  var t1 = document.createTextNode("Made");
 		  btn1.appendChild(t1);
 		  list[i].appendChild(btn1);
-		  btn1.className = "change";*/
+		  btn1.className = "made";
+		  count();
+		  made();
 	}
 }
 
@@ -42,8 +45,9 @@ function todoList() {
 else{
 	alert("Дело не может быть пустым");
 }
- document.getElementById("todoInput").value=null;
  document.getElementById("count").value = deal;
+ document.getElementById("todoInput").value=null;
+ 
 }
 function deleted(){
 var list = document.getElementsByClassName("check");
@@ -58,26 +62,20 @@ listd.className="list-group-item";
 		}
 	}
 }
-/*function change(){
-var list = document.getElementsByClassName("change");
+function made(){
+var list = document.getElementsByClassName("made");
 var listd=document.getElementsByTagName("li");
 listd.className="list-group-item";
 	for (var i = 0; i < list.length; i++) {
 		list[i].onclick = function() {
 		var del = this.parentElement;
-		document.getElementById("todoInput").value=listd[i].innerHTML;
-		
-    	del.remove();
-    	deal--;
-    	count();
+		del.style.backgroundColor ="#00a550";
 		}
 	}
-}*/
-
+}
 function count(){
-document.getElementById("count").value = deal;
+	document.getElementById("c").innerHTML = deal;
 }
 count();
 deleted();
-change();
 
