@@ -1,6 +1,7 @@
 var deal=2;
 check();
 made();
+
 function check(){
 	var list = document.getElementsByTagName("li");
 	list.className="list-group-item";
@@ -41,18 +42,16 @@ function todoList() {
 	deal++;
 	check();
 	count();
-}
-else{
+	}
+	else{
 	alert("Дело не может быть пустым");
-}
- document.getElementById("count").value = deal;
- document.getElementById("todoInput").value=null;
- 
-}
+	}
+	document.getElementById("count").value = deal;
+	 document.getElementById("todoInput").value=null;
+	 
+	}
 function deleted(){
 var list = document.getElementsByClassName("check");
-var listd=document.getElementsByTagName("li");
-listd.className="list-group-item";
 	for (var i = 0; i < list.length; i++) {
 		list[i].onclick = function() {
 		var del = this.parentElement;
@@ -64,8 +63,6 @@ listd.className="list-group-item";
 }
 function made(){
 var list = document.getElementsByClassName("made");
-var listd=document.getElementsByTagName("li");
-listd.className="list-group-item";
 	for (var i = 0; i < list.length; i++) {
 		list[i].onclick = function() {
 		var del = this.parentElement;
